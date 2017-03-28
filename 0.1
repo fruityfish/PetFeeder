@@ -1,0 +1,59 @@
+#include <Servo.h>
+#include <Wire.h>
+#include "DS1307.h"
+
+int ftime = 0; // this is the variable that stores if it is time to feed or not (0 or != 0)
+int pinservo = 3;
+Servo Servo1;
+
+
+
+void setup() {
+  Servo1.attach(pinservo);
+}
+
+
+
+
+void loop() {
+  //timecheck();
+
+  //foodcheck();
+
+  if (ftime=1){
+    //motoraction();
+  }
+
+  //foodcheck();
+
+
+}
+
+
+
+timecheck(){
+  take reading from RTC, if the time is feedign time 
+}
+
+
+motoraction(){
+  //motor open;   
+  Servo1.write(180);
+  //delay();
+  //motor close;
+  Servo1.write(0);
+}
+
+
+foodcheck(){
+  //readsensor
+  if(level is low){
+    turn off food good light
+    then turn the food refill led on.
+  }
+  else if(level is ok){
+    then turn the food check led off
+    turn on food goood light.
+  }
+  
+}
